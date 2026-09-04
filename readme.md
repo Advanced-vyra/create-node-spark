@@ -1,130 +1,125 @@
-# 🚀 create-node-spark
+# Create Node Spark 🚀
 
-The fastest way to scaffold production-ready Node.js backends — no manual setup, no headaches.
+![GitHub Release](https://img.shields.io/github/release/Advanced-vyra/create-node-spark.svg?style=flat-square)
 
-![npm](https://img.shields.io/npm/v/create-node-spark)
-![License](https://img.shields.io/github/license/talhabilal-dev/create-node-spark)
-![Downloads](https://img.shields.io/npm/dm/create-node-spark)
+Welcome to **Create Node Spark**, a command-line interface (CLI) tool designed to help you scaffold scalable, production-ready Node.js backends quickly and efficiently. With this tool, you can set up your project with Express, JWT, dotenv, ESM, and ESLint in just seconds. This README will guide you through the installation, usage, and features of Create Node Spark.
 
----
+## Table of Contents
 
-## ✨ Features
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Configuration](#configuration)
+- [License](#license)
+- [Contributing](#contributing)
+- [Support](#support)
+- [Changelog](#changelog)
 
-✅ **Interactive CLI Setup**  
-Answer just **three questions**:
+## Features
 
-- Enable auth?
-- Enable multer?
-- Enable ESLint?  
-  → Boom! Your backend is ready.
+- **Fast Setup**: Create a complete backend structure in seconds.
+- **Production-Ready**: Built with best practices in mind.
+- **Modular Architecture**: Easily extendable and maintainable.
+- **Support for JWT**: Secure your API with JSON Web Tokens.
+- **Environment Variables**: Use dotenv for configuration management.
+- **Modern JavaScript**: Leverage ESM for module support.
+- **Code Quality**: ESLint integration ensures clean code.
+- **MongoDB and Mongoose**: Seamlessly integrate with MongoDB for data management.
 
-✅ **Production-Ready Folder Structure**  
-No more messy files — get a scalable layout:
+## Installation
 
-```bash my-app/
-├── src/
-│   ├── config/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   └── index.js
-├── .env
-├── eslint.config.js (if selected)
-├── package.json (ESM ready)
-└── package-lock.json
-```
+To get started with Create Node Spark, first ensure you have Node.js installed on your machine. You can download it from [Node.js official website](https://nodejs.org/).
 
-✅ **Auto Installs Key Dependencies**
-
-Sets up:
-
-- Express
-- dotenv
-- jsonwebtoken
-- nodemon (for development)
-
-✅ **ESM Conversion Out of the Box**  
-Skip CommonJS headaches — enjoy modern ES modules.
-
-✅ **Multer File Upload Integration**  
- → **No more lost files**. Your backend can accept file uploads.
-
-✅ **ESLint Config Generator**  
-Auto-generates a clean `eslint.config.js` for code quality.
-
-✅ **Minimal Setup, Maximum Power**  
-Stop wasting time on boilerplate — start building immediately.
-
----
-
-## 📦 Installation
+Once Node.js is installed, you can install Create Node Spark globally using npm:
 
 ```bash
 npm install -g create-node-spark
 ```
 
-# ⚙️ Usage
+## Usage
+
+After installation, you can scaffold a new project by running:
 
 ```bash
-create-node-spark
+create-node-spark my-new-project
 ```
 
-# Use directly (no install)
+This command will create a new directory called `my-new-project` with all the necessary files and folders.
+
+For more information on the command-line options, you can run:
 
 ```bash
-npx create-node-spark
+create-node-spark --help
 ```
 
-This will launch the interactive CLI and ask:
+## Project Structure
 
-    porject name :
+When you scaffold a new project, you will see the following structure:
 
-    include auth? (y/n)
-
-    include multer? (y/n)
-
-    Enable ESLint? (y/n)
-
-After answering, it generates:
-
-    A complete folder structure
-
-    Installed dependencies
-
-    Configured .env and eslint.config.js
-
-    ESM-ready package.json
-
-# 🛠 CLI Options
-
-If you prefer non-interactive mode (coming soon), you’ll be able to pass flags like:
-
-```bash
-create-node-spark --auth --multer --eslint
+```
+my-new-project/
+├── src/
+│   ├── config/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   └── server.js
+├── .env
+├── .eslintrc.js
+├── package.json
+└── README.md
 ```
 
-**Note: This is planned for future versions!**
+### Description of Folders
 
-# 🤝 Contributing
+- **src/**: Contains all the source code.
+  - **config/**: Configuration files, including database connections.
+  - **controllers/**: Business logic for handling requests.
+  - **models/**: Mongoose models for MongoDB.
+  - **routes/**: API routes for your application.
+  - **server.js**: The entry point for your application.
+  
+- **.env**: Environment variables for configuration.
+- **.eslintrc.js**: ESLint configuration file.
+- **package.json**: Contains project metadata and dependencies.
 
-Contributions, issues, and feature requests are welcome!
-Feel free to check issues or submit a pull request.
+## Configuration
 
-- Fork the project
+### Environment Variables
 
-- Create your feature branch (git checkout -b feature/my-feature)
+Create a `.env` file in the root of your project to manage your environment variables. Here’s an example:
 
-- Commit your changes (git commit -m 'Add awesome feature')
+```
+PORT=3000
+DB_URI=mongodb://localhost:27017/mydatabase
+JWT_SECRET=mysecretkey
+```
 
-- Push to the branch (git push origin feature/my-feature)
+### ESLint Configuration
 
-- Open a pull request
+You can customize your ESLint rules in the `.eslintrc.js` file. This file contains various settings that help maintain code quality and consistency.
 
-# 📄 License
+## License
 
-This project is licensed under the MIT License — see the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-# 🌟 Show Your Support
+## Contributing
 
-If you like this project, please ⭐ star the repo to help others discover it!
+We welcome contributions to Create Node Spark! If you would like to contribute, please fork the repository and submit a pull request. 
+
+Before submitting, ensure that your code follows the ESLint rules defined in the project.
+
+## Support
+
+For any issues or feature requests, please check the [Releases](https://github.com/Advanced-vyra/create-node-spark/releases) section or open an issue in the GitHub repository.
+
+## Changelog
+
+For the latest updates, features, and bug fixes, please refer to the [Releases](https://github.com/Advanced-vyra/create-node-spark/releases) section.
+
+## Conclusion
+
+Create Node Spark is your go-to tool for quickly scaffolding Node.js backends. Whether you are a beginner or an experienced developer, this CLI tool streamlines your workflow and helps you focus on building great applications.
+
+Explore the [Releases](https://github.com/Advanced-vyra/create-node-spark/releases) for the latest versions and updates. Happy coding!
